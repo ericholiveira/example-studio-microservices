@@ -20,4 +20,5 @@ class Reddit{
 		
 	}
 }
-Studio.serviceClass(Reddit);
+var serviceObj = Studio.serviceClass(Reddit);
+serviceObj.searchForContent.retry(1)

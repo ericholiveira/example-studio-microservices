@@ -4,6 +4,9 @@ var app = express();
 
 var searchForContent = Studio.module('Reddit')('searchForContent');
 
+app.get('/favicon.ico', function (req, res) {
+	res.send('');
+});
 app.get('/:path', function (req, res) {
   searchForContent(req.params.path).then((result)=>{
   	res.send(result);
